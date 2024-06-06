@@ -34,3 +34,8 @@ doctorSchema.methods.getSignedJwtToken = function(){
         expiresIn: '120m'
     });
 };
+
+const Doctor = mongoose.moodel('Doctor', doctorSchema);
+
+// exports
+module.exports = Doctor;
