@@ -60,7 +60,8 @@ module.exports.login = async(req, res)=>{
         res.status(200).json({
             success: true,
             token,
-            message: `Logged In successfully! Keep the Token Safe ${doctor.username}`        })
+            message: `Logged In successfully! Keep the Token Safe ${doctor.username}`        
+        })
 
     } catch(err){
         console.log(err);
