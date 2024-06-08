@@ -6,7 +6,7 @@ mongoose.set('useCreateIndex', true);
 const uri = process.env.MONGODB_URI;
 
 // Database connection 
-mongoose.connect(uri  , { useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(uri || 'mongodb://127.0.0.1:27017/hospital_API'  , { useNewUrlParser: true, useUnifiedTopology: true});
 const db = mongoose.connection;
 
 // connection Error handling
