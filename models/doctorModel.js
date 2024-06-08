@@ -35,7 +35,7 @@ doctorSchema.methods.getSignedJwtToken = function(){
     });
 };
 
-const Doctor = mongoose.moodel('Doctor', doctorSchema);
+const Doctor = mongoose.model('Doctor', doctorSchema);
 
 // exports
 module.exports = Doctor;
