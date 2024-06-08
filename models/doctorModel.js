@@ -35,6 +35,11 @@ doctorSchema.methods.getSignedJwtToken = function(){
     });
 };
 
+// ****** Checking the bcrypt password ****** //
+doctorSchema.methods.matchPassword = async function(enteredPassword) {
+    return await bcrypt.compare(enteredPassword, this.password);
+  };
+
 const Doctor = mongoose.model('Doctor', doctorSchema);
 
 // exports

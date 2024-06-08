@@ -36,7 +36,7 @@ exports.register = async(req,res) =>{
 
     }catch (err){
         // Error handling in the catch block
-        return res.status(401).josn({
+        return res.status(401).json({
             success: false,
             message: 'Error Occurred'
         })
